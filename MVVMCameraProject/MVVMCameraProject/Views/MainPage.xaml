@@ -7,5 +7,7 @@
              Title="MainPage">
   <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
     <Label Text="{Binding Title}" />
+    <Button Text ="{Binding ButtonTitle}" Command="{Binding TakePhotoCommand}"/>
+
   </StackLayout>
 </ContentPage>
