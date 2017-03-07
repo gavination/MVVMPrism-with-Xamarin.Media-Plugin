@@ -51,6 +51,8 @@ namespace MVVMCameraProject.ViewModels
 
         private async void TakePhoto()
         {
+            await CrossMedia.Current.Initialize();
+
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
                 await _dialogService.DisplayAlertAsync("No Camera", ":( No camera avaialble.", "OK");
